@@ -1,0 +1,556 @@
+/* Reset e configurações básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #000;
+    line-height: 1.4;
+
+
+}
+
+.container {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 56px;
+}
+
+.logo img {
+    width: 148px;
+    height: 40px;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.language-selector select {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: 1px solid #aaa;
+    padding: 8px 19px;
+    border-radius: 2px;
+    font-size: 16px;
+}
+
+.btn-login {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 9px 16px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background-color: #f40612;
+}
+
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    
+
+
+
+    /* Overlay escuro */
+    position: relative;
+}
+
+.hero-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+    background-image: url(download\ \(3\).jpg);
+    border-radius: 20px;
+}
+
+.hero-content>* {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+
+}
+
+.hero-content h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.25rem;
+    }
+
+    .email-form {
+        flex-direction: column;
+    }
+
+    .email-form input,
+    .btn-get-started {
+        width: 100%;
+        border-radius: 2px;
+        margin-bottom: 10px;
+        height: 5px;
+    }
+
+    .btn-get-started {
+        font-size: 1.2rem;
+        padding: 50px;
+    }
+}
+
+
+/* Email Form Responsivo */
+.email-form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 670px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    ;
+    
+   
+}
+
+.destaque {
+    margin-left: 40px;
+}
+
+.email-form input {
+    flex: 1;
+    min-width: 300px;
+    padding: 16px;
+    font-size: 16px;
+    border: 1px solid #8c8c8c;
+    border-radius: 2px 0 0 2px;
+    outline: none;
+    margin: 2px;
+}
+
+
+/* Botão Vamos lá - Versão Menor e Centralizada */
+.btn-get-started {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Reduzido o padding */
+    font-size: 0.9rem; /* Fonte menor */
+    font-weight: 500;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+    /* Centralização */
+    margin: 15px auto 0 auto; /* Margem superior e centralização */
+    width: auto; /* Largura automática */
+    max-width: 160px; /* Largura máxima reduzida */
+    justify-content: center; /* Centraliza o conteúdo do botão */
+    
+    /* Transição suave */
+    transition: all 0.3s ease;
+}
+/* Para o formulário de email específico */
+.email-form .btn-get-started {
+    margin-top: 15px;
+    border-radius: 2px;
+}
+
+
+.btn-get-started:hover {
+    background-color: #f40612;
+    transform: scale(1.05); /* Efeito de hover sutil */
+}
+
+/* FAQ Section */
+.faq {
+    border-top: 8px solid #222;
+    padding: 70px 45px;
+    text-align: center;
+
+}
+
+.faq h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+
+}
+
+
+.faq-list {
+    max-width: 815px;
+    margin: 0 auto 60px;
+
+}
+
+
+
+
+.faq-question {
+    width: 100%;
+    background-color: #303030;
+    color: white;
+    border: none;
+    padding: 24px;
+    text-align: left;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+}
+
+
+
+
+.faq-answer {
+    text-align: left;
+    padding: 24px;
+    font-size: 1.5rem;
+    display: none;
+    border-radius: 20px;
+}
+
+
+
+
+
+.language-selector-footer {
+    margin: 20px 0;
+}
+
+.language-selector-footer select {
+    background-color: #000;
+    color: #757575;
+    border: 1px solid #333;
+    padding: 12px 26px 12px 12px;
+    font-size: 16px;
+}
+
+.footer-country {
+    margin-top: 24px;
+    font-size: 14px;
+}
+
+
+
+
+.btn-get-started {
+    border-radius: 2px;
+    font-size: 1rem;
+    padding: 12px 24px;
+    margin: 10px;
+}
+
+.feature-text h2 {
+    font-size: 1.75rem;
+}
+
+.feature-text p {
+    font-size: 1.125rem;
+}
+
+.faq h2 {
+    font-size: 1.75rem;
+}
+
+.faq-question {
+    font-size: 1.125rem;
+    padding: 16px;
+}
+
+.footer-links {
+    grid-template-columns: 1fr;
+}
+
+body {
+
+    color: white;
+}
+
+
+
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e50914;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.user-info {
+    font-size: 16px;
+}
+
+
+
+.section {
+    padding: 20px 40px;
+}
+
+.section h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.row {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+}
+
+
+
+
+.card {
+    flex: 0 0 auto;
+    width: 180px;
+    height: 270px;
+    background-color: #333;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+    z-index: 2;
+}
+
+.faq h2 {
+    font-size: 2rem;
+    /* título menor */
+    margin-bottom: 30px;
+}
+
+.faq-question {
+    font-size: 1rem;
+    /* fonte menor */
+    padding: 16px 20px;
+    background-color: #303030;
+    border: none;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #414141;
+}
+
+.faq-answer {
+    font-size: 0.95rem;
+    padding: 16px 20px;
+    background-color: #303030;
+    color: #ccc;
+    display: none;
+    line-height: 1.5;
+}
+
+.faq-answer.active {
+    display: block;
+}
+
+.symbol {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.footer {
+    border-top: 8px solid #222;
+    padding: 40px 5%;
+    background-color: #000;
+    color: #757575;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p:first-child {
+    margin-bottom: 20px;
+}
+
+.footer a {
+    color: #757575;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.link-column {
+    flex: 1 1 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+    }
+
+    .link-column {
+        width: 100%;
+    }
+}
+
+
+
+
+.checkout {
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #141414;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 90px rgba(255,0,0,0.5);
+  font-family: Arial, sans-serif;
+}
+
+.checkout h2 {
+  margin-bottom: 15px;
+  color: #e50914;
+}
+
+.planos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.plano {
+  border: 1px solid #333;
+  padding: 12px;
+  border-radius: 6px;
+  background: #1f1f1f;
+  transition: 0.3s;
+}
+
+.plano:hover {
+  border-color: #e50914;
+  background: #2a2a2a;
+}
+
+.planos input[type="radio"] {
+  display: none;
+}
+
+.planos input[type="radio"]:checked + .plano {
+  border: 2px solid #e50914;
+  background: #2a2a2a;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+input {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #e50914;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #b20710;
+}
